@@ -10,6 +10,22 @@
 		<link rel="stylesheet" href="./styles/main.css">
 	</head>
 	<body>
-		<h1>simple-form</h1>
+		<div class="container">
+			<form class="form" action="javascript:alert('Lorem')">
+				<h1 class="form__heading">Authanticate</h1>
+				<div class="form__text-input-group">
+					<input class="form__text-input" type="text" placeholder=" ">
+					<label class="form__label">Email</label>
+				</div>
+				<div class="form__text-input-group">
+					<input class="form__text-input" type="password" placeholder=" ">
+					<label class="form__label">Password</label>
+					<div class="form__action-group">
+						<button class="form__button form__button_primary">Sign in</button>
+						<button class="form__button form__button_secondary">Sign up</button>
+					</div>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>
