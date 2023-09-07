@@ -8,22 +8,28 @@
 
 		<link rel="stylesheet" href="./styles/reset.css">
 		<link rel="stylesheet" href="./styles/main.css">
+
+		<!-- An emptpy script tag to fix chrome's "shoot transitions on-load" weird bug -->
+		<script> </script>
 	</head>
 	<body>
 		<div class="container">
-			<form class="form" action="javascript:alert('Lorem')">
+			<form class="form" action="javascript:void()" autocomplete="on">
 				<h1 class="form__heading">Authanticate</h1>
+
 				<div class="form__text-input-group">
-					<input class="form__text-input" type="text" placeholder=" ">
+					<input class="form__text-input" type="email" placeholder=" ">
 					<label class="form__label">Email</label>
 				</div>
+
 				<div class="form__text-input-group">
 					<input class="form__text-input" type="password" placeholder=" ">
 					<label class="form__label">Password</label>
-					<div class="form__action-group">
-						<button class="form__button form__button_primary">Sign in</button>
-						<button class="form__button form__button_secondary">Sign up</button>
-					</div>
+				</div>
+
+				<div class="form__action-group">
+					<button class="form__button form__button_primary" type="submit">Sign in</button>
+					<button class="form__button form__button_secondary" type="button">Sign up</button>
 				</div>
 			</form>
 		</div>

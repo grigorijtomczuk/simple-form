@@ -21,28 +21,74 @@
 
 .form__text-input-group {
 	position: relative;
+	margin: 0 auto;
+	width: fit-content;
 }
 
 .form__text-input {
+	transition: 0.25s ease;
+	margin: 0 0 24px 0;
 	width: 200px;
 	border: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #aeaeae;
 	outline: none;
+	padding: 4px 0;
 	background: none;
-	margin: 0 0 24px 0;
+	font: 16px system-ui;
+}
+
+.form__text-input:focus,
+.form__text-input:not(:placeholder-shown) {
+	border-bottom: 1px solid #727272;
 }
 
 .form__label {
 	position: absolute;
 	z-index: -1;
 	left: 0;
+	transition: 0.25s ease;
+	color: #aeaeae;
+}
+
+.form__text-input:focus ~ .form__label,
+.form__text-input:not(:placeholder-shown) ~ .form__label {
+	font-size: 12px;
+	transform: translateY(-12px);
+	color: #727272;
 }
 
 .form__action-group {
-	font-size: 0;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
 }
 
 .form__button {
+	transition: 0.25s ease;
+	border: none;
+	border-radius: 4px;
 	outline: none;
+	padding: 10px;
+	cursor: pointer;
 	font: 16px system-ui;
+}
+
+.form__button_primary {
+	background: #3e5ae7;
+	color: #ffffff;
+}
+
+.form__button_primary:hover,
+.form__button_primary:focus {
+	background: #526ae0;
+}
+
+.form__button_secondary {
+	background: #d1d1d1;
+	color: #727272;
+}
+
+.form__button_secondary:hover,
+.form__button_secondary:focus {
+	background: #d7d7d7;
 }
