@@ -21,24 +21,21 @@
 
 .form__text-input-group {
 	position: relative;
-	margin: 0 auto;
-	margin-bottom: 24px;
-	width: fit-content;
+	margin: 0 0 24px 0;
 }
 
 .form__text-input {
 	transition: 0.25s ease;
-	width: 200px;
+	width: 100%;
 	border: none;
 	border-bottom: 1px solid #aeaeae;
 	outline: none;
-	padding: 4px 0;
-	background: none;
+	padding: 0 0 4px 0;
+	background: transparent;
 	font: 16px system-ui;
 }
 
-.form__text-input:focus,
-.form__text-input:not(:placeholder-shown) {
+.form__text-input:focus {
 	border-bottom: 1px solid #727272;
 }
 
@@ -52,8 +49,11 @@
 
 .form__text-input:focus ~ .form__text-input-label,
 .form__text-input:not(:placeholder-shown) ~ .form__text-input-label {
+	transform: translateY(-16px);
 	font-size: 12px;
-	transform: translateY(-12px);
+}
+
+.form__text-input:focus ~ .form__text-input-label {
 	color: #727272;
 }
 
@@ -66,7 +66,7 @@
 .form__button {
 	transition: 0.25s ease;
 	border: none;
-	border-radius: 4px;
+	border-radius: 6px;
 	outline: none;
 	padding: 10px;
 	cursor: pointer;
