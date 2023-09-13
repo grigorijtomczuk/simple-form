@@ -8,12 +8,12 @@
 
 .form {
 	width: 300px;
-	box-shadow: 0 4px 10px #000000ac;
+	box-shadow: 0 4px 16px #0000005a;
 	border-radius: 12px;
 	padding: 32px;
 }
 
-.form__heading {
+.form__title {
 	margin: 0 0 32px 0;
 	font-size: 24px;
 	text-align: center;
@@ -22,12 +22,12 @@
 .form__text-input-group {
 	position: relative;
 	margin: 0 auto;
+	margin-bottom: 24px;
 	width: fit-content;
 }
 
 .form__text-input {
 	transition: 0.25s ease;
-	margin: 0 0 24px 0;
 	width: 200px;
 	border: none;
 	border-bottom: 1px solid #aeaeae;
@@ -42,7 +42,7 @@
 	border-bottom: 1px solid #727272;
 }
 
-.form__label {
+.form__text-input-label {
 	position: absolute;
 	z-index: -1;
 	left: 0;
@@ -50,8 +50,8 @@
 	color: #aeaeae;
 }
 
-.form__text-input:focus ~ .form__label,
-.form__text-input:not(:placeholder-shown) ~ .form__label {
+.form__text-input:focus ~ .form__text-input-label,
+.form__text-input:not(:placeholder-shown) ~ .form__text-input-label {
 	font-size: 12px;
 	transform: translateY(-12px);
 	color: #727272;
