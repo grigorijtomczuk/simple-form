@@ -30,7 +30,7 @@
 	border: none;
 	border-bottom: 1px solid #aeaeae;
 	outline: none;
-	padding: 0 0 4px 0;
+	padding: 6px 0;
 	background: transparent;
 	font: 16px system-ui;
 }
@@ -42,14 +42,17 @@
 .form__text-input-label {
 	position: absolute;
 	z-index: -1;
+	top: 50%;
 	left: 0;
+	transform: translateY(-50%);
 	transition: 0.25s ease;
 	color: #aeaeae;
 }
 
 .form__text-input:focus ~ .form__text-input-label,
 .form__text-input:not(:placeholder-shown) ~ .form__text-input-label {
-	transform: translateY(-16px);
+	top: -12px;
+	transform: none;
 	font-size: 12px;
 }
 
