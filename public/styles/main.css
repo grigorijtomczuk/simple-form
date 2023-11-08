@@ -84,9 +84,8 @@
 	color: #ffffff;
 }
 
-/* FIXME: Buttons :focus state freezes after click */
 .form__button_primary:hover,
-.form__button_primary:focus {
+.form__button_primary:focus-visible {
 	background: #526ae0;
 }
 
@@ -96,6 +95,6 @@
 }
 
 .form__button_secondary:hover,
-.form__button_secondary:focus {
+.form__button_secondary:focus-visible {
 	background: #d7d7d7;
 }
